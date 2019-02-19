@@ -14,7 +14,7 @@ defmodule Demo.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :cowboy],
+      extra_applications: [:logger, :cowboy, :phoenix_pubsub],
       mod: {Demo.Application, []}
     ]
   end
@@ -24,7 +24,8 @@ defmodule Demo.MixProject do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-      {:cowboy, git: "https://github.com/ninenines/cowboy.git", tag: "2.0.0-pre.7"} # ココ! cowboyを追加
+      {:cowboy, git: "https://github.com/ninenines/cowboy.git", tag: "2.0.0-pre.7"}, # cowboyを追加
+      {:phoenix_pubsub, "~> 1.0"} # phoenixを追加
     ]
   end
 end

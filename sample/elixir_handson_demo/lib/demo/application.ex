@@ -11,7 +11,8 @@ defmodule Demo.Application do
     children = [
       # Starts a worker by calling: Demo.Worker.start_link(arg)
       # {Demo.Worker, arg}
-      worker(__MODULE__, [], function: :start_cowboy)
+      worker(__MODULE__, [], function: :start_cowboy),
+      supervisor(Phoenix.PubSub.PG2, [:chat_pubsub, []])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
