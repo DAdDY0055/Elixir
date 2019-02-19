@@ -1,4 +1,4 @@
-defmodule ElixirHandsinDemo do
+defmodule Demo do
   @moduledoc """
   Documentation for ElixirHandsinDemo.
   """
